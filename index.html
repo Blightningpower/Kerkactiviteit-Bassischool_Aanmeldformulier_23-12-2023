@@ -1,17 +1,13 @@
-<!DOCTYPE html>
 <html lang="nl">
 
 <head>
 
-    <title>Kerkamp Basisschool Aanmeldformulier</title>
+    <title>Kerkactiviteit Basisschool Aanmeldformulier Kerstlunch 2023</title>
 
     <!--links for the Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/img/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
 
     <!--metatags for responsiveness-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +23,7 @@
             font-family: Arial Rounded MT Bold, Arial, Arial Black, Arial narrow, serif;
         }
 
-        body {
+        html, body {
             background-color: greenyellow;
             text-align: center;
             font-family: cursive;
@@ -36,13 +32,20 @@
             padding: 0;
         }
 
-        h1 {
+        header {
             background-color: blueviolet;
-            color: orange;
-            line-height: 130%;
-            margin: 0;
+            top: 0;
             position: fixed;
             min-width: -webkit-fill-available;
+        }
+
+        h1 {
+            color: orange;
+            margin: 0;
+        }
+
+        main {
+            margin-top: 10vh;
         }
 
         h2 {
@@ -57,40 +60,18 @@
 
         ul {
             padding: 3rem;
+            margin: 0;
         }
 
         iframe {
-            min-width: -webkit-fill-available;
-            min-height: 580px;
+            min-width: 410px;
+            min-height: 400px;
         }
 
         /*Code applied to all HTML elements with an ID*/
 
         ::placeholder {
             text-align: center;
-        }
-
-        #payment-button {
-            padding: 10px 20px;
-            background-color: #080;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            border: 2px solid black;
-        }
-
-        #payment-button a {
-            color: white;
-        }
-
-        #payment-button:hover {
-            background-color: #008;
-            color: white;
-        }
-
-        #payment-button:hover {
-            background-color: #800;
-            color: white;
         }
 
         .blueText {
@@ -104,82 +85,31 @@
 </head>
 
 <body>
-    <h1>Kerkamp Basisschool Aanmeldformulier</h1>
-    <br>
-    <ul>
-        <li>
-            <h2>Vul in dit aanmeldformulier je gegevens in en klik op de knop 'Verzend gegevens' om je vergevens te
-                verzenden.</h2>
-        </li>
-        <li>
-            <h2><span>Vergeet niet om de "Ik ben geen robot" reCAPTCHA aan te vinken na het verzenden van je
-                    gegevens!.</span></h2>
-        </li>
-        <li>
-            <h2>Klik daarna op de knop 'Betalen' om te betalen via Tikkie.</h2>
-        </li>
-        <li>
-            <h2><span>GEEN betaling is GEEN aanmelding!</span></h2>
-        </li>
-        <li>
-            <h2>Vul in de beschrijving van de Tikkie nogmaals de naam van de deelnemer in die zich inschrijft en
-                zijn/haar groep.</h2>
-        </li>
-        <li>
-            <h2>Zodra je een betalingsbevestiging hebt ontvangen van Tikkie, is je aanmelding voltooid.</h2>
-        </li>
-        <li>
-            <h2>Alles wat geel is gemarkeerd, is verplicht in te vullen</h2>
-        </li>
-        <li>
-            <h2>Houd er rekening mee dat er een beperkt aantal plekken zijn. Plekken worden <span>NIET</span>
-                gereserveerd</h2>
-        </li>
-        <li>
-            <h2><span>(LET OP! Dit aanmeldformulier is per deelnemer. Als je meer deelnemers wilt aanmelden,
-                    moet je meerdere keren het formulier invullen en betalen!)</span></h2>
-        </li>
-        <li>
-            <h2 class="blueText">Betaal je via de Belgische bank, maak het geld dan over naar rekeningnummer: <i><span
-                        class="blackText">NL48INGB0003388918</span></i> en stuur
-                vervolgens een bericht naar <i><span class="blackText">06 407 460 17</span></i> om te bevestigen dat je
-                hebt betaald. (Dit formulier valt
-                buiten de betaling en kan gewoon ingevuld en verzonden worden).</h2>
-        </li>
-        <li>
-            <h2>Problemen met aanmelden? Neem contact op met Gina via haar telefoonnummer: 06 407 460 17</h2>
-        </li>
-    </ul>
-    <br>
-    <iframe id="iFrame"
-        src="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/html/aanmeldformulier.html"
-        scrolling="no"></iframe>
-    <br>
-    <br>
-    <a href="https://www.ing.nl/de-ing/payreq?trxid=xKDOoknEqqSCFWWmKjD4kt89optZNZRR&flow-step=payment-request" id="payment-button">Betalen</a>
-    <br>
-    <br>
-    <script>
-        // Voeg een klikgebeurtenislistener toe aan de betalingsknop
-        document.getElementById("payment-button").addEventListener("click", function (e) {
-            // Voorkom standaardgedrag van de link (navigeren naar de URL)
-            e.preventDefault();
-
-            // Toon het eerste bericht aan de gebruiker
-            var confirmation = confirm("Heb je alle gele velden met je gegevens al ingevuld en op de \n 'Verzend gegevens' knop geklikt? \n\n"
-                + "Vergeet niet de 'Ik ben geen robot' reCAPTCHA aan te vinken! \n\n"
-                + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
-            );
-
-            // Als de gebruiker op OK klikt, navigeer naar de Tikkie-link
-            if (confirmation) {
-                window.location.href = this.href;
-            } else {
-                // Als de gebruiker op Annuleren klikt, toon een bericht
-                var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op \n 'Verzend gegevens' en vink vervolgens de 'Ik ben geen robot' reCAPTCHA aan");
-            }
-        });
-    </script>
-</body>
-
-</html>
+    <header>
+        <h1>Kerkactiviteit Basisschool Aanmeldformulier Kerstlunch 2023</h1>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <h2>Vul in dit aanmeldformulier je Voor- en Achternaam in en klik op de knop 'Verzend gegevens' om je
+                    gegevens te
+                    verzenden.</h2>
+            </li>
+            <li>
+                <h2>De kerstlunch is op zondag 23-12-2023 van 11:20 - 15:00 uur</h2>
+            </li>
+            <li>
+                <h2><span>Vergeet niet om de "Ik ben geen robot" reCAPTCHA aan te vinken na het verzenden van je
+                        gegevens!.</span></h2>
+            </li>
+            <li>
+                <h2><span>(LET OP! Dit aanmeldformulier is per deelnemer. Als je meer deelnemers wilt aanmelden,
+                        moet je meerdere keren het formulier invullen en betalen!)</span></h2>
+            </li>
+            <li>
+                <h2>Problemen met aanmelden? Neem contact op met Gina via haar telefoonnummer: 06 407 460 17</h2>
+            </li>
+        </ul>
+        <br>
+        <iframe id="iFrame" src="html/aanmeldformulier.html" scrolling="no"></iframe>
+    </main>

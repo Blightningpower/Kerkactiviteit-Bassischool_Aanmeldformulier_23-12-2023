@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+  <title>Kerkactiviteit Aanmeldformulier</title>
+
+  <!--metatags for responsiveness-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+  <style>
+    /*Code applied to all standard HTML element tags*/
+    * {
+      text-decoration: none;
+      font-family: Arial Rounded MT Bold, Arial, Arial Black, Arial narrow, serif;
+    }
+
+    html,
+    body {
+      background-color: greenyellow;
+      text-align: center;
+      min-height: -webkit-fill-available;
+    }
+
+    span {
+      font-size: large;
+      color: red;
+    }
+
+    form {
+      margin: 40% auto
+    }
+
+    label {
+      font-size: large;
+    }
+
+    /*Code applied to all HTML elements with an ID*/
+
+    #nChild {
+      min-width: 20rem;
+      background-color: #ffff1a;
+      border-radius: 3px;
+      padding: 1%;
+    }
+
+    ::placeholder {
+      text-align: center;
+      color: darkblue;
+      font-size: medium;
+    }
+
+    #submitButton {
+      padding: 10px 20px;
+      background-color: #800;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: inherit;
+      margin-top: 10%;
+    }
+
+    #submitButton:hover {
+      background-color: #080;
+      color: #fff;
+    }
+
+    #submitButton:active {
+      background-color: #008;
+      color: #fff;
+    }
+
+    #group {
+      min-width: 15rem;
+      background-color: #ffff1a;
+      border-radius: 3px;
+    }
+
+    /*Code applied to all HTML elements with a class*/
+  </style>
+</head>
+
+<body>
+  <form id="form" action="https://formsubmit.co/bavli2002@hotmail.com" method="POST" target="_self">
+    <div class="row">
+      <div class="col-25">
+        <label for="VoorEnAchternaam">Voor- en Achternaam:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nChild" name="VoorEnAchternaam" placeholder="Vul hier je voor- en achternaam in"
+          required>
+      </div>
+    </div>
+    <button id="submitButton" type="submit">Verzend gegevens</button>
+  </form>
+
+
+  <script>
+    document.getElementById("submitButton").addEventListener("click", function (e) {
+      // Voorkom standaardgedrag van de link (navigeren naar de URL)
+      e.preventDefault();
+
+      // Toon het eerste bericht aan de gebruiker
+      var confirmation = confirm("Heb je alle gele velden met je gegevens al ingevuld en op de \n 'Verzend gegevens' knop geklikt? \n\n"
+        + "Vergeet niet de 'Ik ben geen robot' reCAPTCHA aan te vinken! \n\n"
+        + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
+      );
+
+      // Als de gebruiker op OK klikt, submit het formulier
+      if (confirmation) {
+        document.getElementById("form").submit();
+      } else {
+        // Als de gebruiker op Annuleren klikt, toon een bericht
+        var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op \n 'Verzend gegevens' en vink vervolgens de 'Ik ben geen robot' reCAPTCHA aan");
+      }
+    });
+  </script>
+</body>
+
+</html>
